@@ -1,35 +1,42 @@
 "use client";
 
-import { FaCog, FaPlus, FaSearch, FaVideo } from "react-icons/fa";
 import styled from "@emotion/styled";
 import tw from "twin.macro";
+import { FaCog, FaPlus, FaSearch, FaTv, FaSync } from "react-icons/fa";
 
-const SectionTitle = styled.h2`
-  ${tw`text-2xl font-semibold text-center mt-24 mb-16 text-black`}
+const FeaturesSection = styled.section`
+  ${tw`flex flex-col items-center py-24`}
 `;
 
-const FeatureGrid = styled.div`
-  ${tw`grid grid-cols-2 gap-8 max-w-[1000px] mx-auto`}
+const FeaturesTitle = styled.h2`
+  ${tw`font-semibold text-center mb-16 text-black`}
+  font-size: 36px;
+`;
+
+const FeaturesGrid = styled.div`
+  ${tw`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-6`}
 `;
 
 const FeatureCard = styled.div`
-  ${tw`flex items-start gap-5 p-6 bg-gray-50 rounded-xl`}
+  ${tw`flex items-start gap-5 p-6 rounded-xl`}
 `;
 
 const FeatureIcon = styled.div`
-  ${tw`flex items-center justify-center w-9 h-9 bg-black text-white rounded-lg flex-shrink-0`}
+  ${tw`w-12 h-12 bg-black text-white rounded-lg flex items-center justify-center text-xl flex-shrink-0`}
 `;
 
 const FeatureContent = styled.div`
-  ${tw`flex flex-col gap-1.5`}
+  ${tw`flex flex-col flex-1`}
+  margin-top: -4px;
 `;
 
 const FeatureTitle = styled.h3`
-  ${tw`text-base font-semibold text-black`}
+  ${tw`text-lg font-semibold text-black`}
+  line-height: 1;
 `;
 
 const FeatureDescription = styled.p`
-  ${tw`text-sm text-gray-600 leading-relaxed`}
+  ${tw`text-gray-600 text-base leading-relaxed mt-2`}
 `;
 
 const features = [
@@ -49,17 +56,22 @@ const features = [
     description: "등록된 노래와 자막을 검색하고 효율적으로 관리할 수 있습니다.",
   },
   {
-    icon: <FaVideo />,
+    icon: <FaTv />,
     title: "OBS 출력",
     description: "동기화된 자막을 OBS에 출력하여 방송에서 활용할 수 있습니다.",
   },
+  {
+    icon: <FaSync />,
+    title: "실시간 동기화",
+    description: "DAW의 오디오 신호와 자막을 실시간으로 동기화합니다.",
+  },
 ];
 
-export const DAWControls = () => {
+export const Features = () => {
   return (
-    <section>
-      <SectionTitle>강력한 기능을 간단하게</SectionTitle>
-      <FeatureGrid>
+    <FeaturesSection>
+      <FeaturesTitle>강력한 기능을 간단하게</FeaturesTitle>
+      <FeaturesGrid>
         {features.map((feature, index) => (
           <FeatureCard key={index}>
             <FeatureIcon>{feature.icon}</FeatureIcon>
@@ -69,7 +81,7 @@ export const DAWControls = () => {
             </FeatureContent>
           </FeatureCard>
         ))}
-      </FeatureGrid>
-    </section>
+      </FeaturesGrid>
+    </FeaturesSection>
   );
 };
