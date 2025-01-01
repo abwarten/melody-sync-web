@@ -48,6 +48,7 @@ const NavLink = styled.a<{ isActive?: boolean }>`
   margin-left: 1rem;
   display: flex;
   align-items: center;
+  text-decoration: none;
 
   ${({ isActive }) =>
     isActive &&
@@ -392,8 +393,11 @@ export default function Page() {
         <LeftSection>
           <TopBarTitle>Melody-sync</TopBarTitle>
           <NavLinks>
-            <NavLink isActive={true}>홈</NavLink>
-            <NavLink>사용방법</NavLink>
+            <NavLink href="/" isActive={true}>
+              홈
+            </NavLink>
+            <NavLink href="/how-to-use">사용방법</NavLink>
+            <NavLink href="/contact">연락처</NavLink>
           </NavLinks>
         </LeftSection>
         <RightNav>
