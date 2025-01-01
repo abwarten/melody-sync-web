@@ -135,7 +135,10 @@ export default function HowToUsePage() {
           </NavLinks>
         </LeftSection>
         <RightNav>
-          <DownloadButton>
+          <DownloadButton
+            href="https://github.com/abwarten/Melody-Sync-Release/releases/download/v0.0.3-beta/MelodySync-Setup-0.0.3-beta.exe"
+            target="_blank"
+          >
             <FaDownload className="mr-2" />
             다운로드
           </DownloadButton>

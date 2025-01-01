@@ -282,19 +282,26 @@ const HeroButtons = styled.div`
   ${tw`flex gap-4`}
 `;
 
-const PrimaryButton = styled.button`
+const PrimaryButton = styled.a`
   ${tw`flex items-center justify-center rounded-lg bg-black text-white text-lg font-semibold w-[148px] h-[62px] border-none transition-colors duration-200 hover:bg-[#333333]`}
+  text-decoration: none;
 `;
 
-const SecondaryButton = styled.button`
+const SecondaryButton = styled.a`
   ${tw`flex items-center justify-center rounded-lg bg-[#e0e7ff] text-lg font-semibold w-[216px] h-[62px] border-none transition-colors duration-200 hover:bg-[#c7d2fe]`}
+  text-decoration: none;
+  color: #000000;
+
+  &:hover {
+    color: #000000;
+  }
 
   svg {
     margin-right: 8px;
   }
 `;
 
-const BottomDownloadButton = styled.button`
+const BottomDownloadButton = styled.a`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -302,15 +309,14 @@ const BottomDownloadButton = styled.button`
   padding: 12px 20px;
   gap: 8px;
 
-  height: 50px;
   border-radius: 4px;
+  text-decoration: none;
 
   background: #ffffff;
   color: #000000;
   font-size: 16px;
   font-weight: 500;
 
-  border: none;
   cursor: pointer;
   transition: all 0.2s;
 
@@ -323,7 +329,7 @@ const BottomDownloadButton = styled.button`
   }
 `;
 
-const BottomDiscordButton = styled.button`
+const BottomDiscordButton = styled.a`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -331,60 +337,26 @@ const BottomDiscordButton = styled.button`
   padding: 12px 20px;
   gap: 8px;
 
-  height: 50px;
   border-radius: 4px;
+  text-decoration: none;
+  color: #ffffff;
 
   background: #4f46e5;
-  color: #ffffff;
   font-size: 16px;
   font-weight: 500;
-
-  box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0);
-  z-index: 1;
 
   cursor: pointer;
   transition: all 0.2s;
 
   &:hover {
     background: #4338ca;
+    color: #ffffff;
   }
 
   svg {
     font-size: 16px;
   }
 `;
-
-const features = [
-  {
-    icon: <FaCog />,
-    title: "설정 기능",
-    description:
-      "프로그램의 다양한 설정을 사용자 환경에 맞게 커스터마이징할 수 있습니다.",
-  },
-  {
-    icon: <FaPlus />,
-    title: "자막 추가",
-    description: "새로운 노래와 자막을 손쉽게 추가하고 관리할 수 있습니다.",
-  },
-  {
-    icon: <FaSearch />,
-    title: "검색 기능",
-    description: "등록된 노래와 자막을 빠르고 효율적으로 검색할 수 있습니다.",
-  },
-  {
-    icon: <FaVideo />,
-    title: "OBS 출력",
-    description:
-      "동기화된 자막을 OBS로 원활하게 출력하여 방송에서 활용할 수 있습니다.",
-  },
-  {
-    icon: <FaSync />,
-    title: "DAW 신호 연동",
-    description:
-      "DAW의 오디오 신호를 실시간으로 감지하여 SRT 자막과 자동으로 연동합니다.",
-  },
-];
 
 export default function Page() {
   return (
@@ -401,7 +373,10 @@ export default function Page() {
           </NavLinks>
         </LeftSection>
         <RightNav>
-          <DownloadButton>
+          <DownloadButton
+            href="https://github.com/abwarten/Melody-Sync-Release/releases/download/v0.0.3-beta/MelodySync-Setup-0.0.3-beta.exe"
+            target="_blank"
+          >
             <FaDownload className="mr-2" />
             다운로드
           </DownloadButton>
@@ -415,8 +390,17 @@ export default function Page() {
             도구입니다.
           </HeroSubtitle>
           <HeroButtons>
-            <PrimaryButton>시작하기</PrimaryButton>
-            <SecondaryButton>
+            <PrimaryButton
+              as="a"
+              href="https://github.com/abwarten/Melody-Sync-Release/releases/download/v0.0.3-beta/MelodySync-Setup-0.0.3-beta.exe"
+              target="_blank"
+            >
+              시작하기
+            </PrimaryButton>
+            <SecondaryButton
+              href="https://discord.gg/vJBQAsBmDR"
+              target="_blank"
+            >
               <FaDiscord />
               디스코드 참여
             </SecondaryButton>
@@ -524,11 +508,18 @@ export default function Page() {
               Melody-sync로 당신의 작업을 더욱 효율적으로 만들어보세요.
             </BottomDescription>
             <BottomButtons>
-              <BottomDownloadButton>
+              <BottomDownloadButton
+                as="a"
+                href="https://github.com/abwarten/Melody-Sync-Release/releases/download/v0.0.3-beta/MelodySync-Setup-0.0.3-beta.exe"
+                target="_blank"
+              >
                 <FaDownload />
                 다운로드
               </BottomDownloadButton>
-              <BottomDiscordButton>
+              <BottomDiscordButton
+                href="https://discord.gg/vJBQAsBmDR"
+                target="_blank"
+              >
                 <FaDiscord />
                 디스코드 참여
               </BottomDiscordButton>
