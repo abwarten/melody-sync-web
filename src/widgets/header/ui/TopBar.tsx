@@ -54,7 +54,7 @@ export const TopBar = ({ currentPath }: TopBarProps) => {
       </LeftSection>
       <RightNav>
         <NavLink
-          href="https://github.com/abwarten/Melody-Sync-Release/releases/latest"
+          href="https://github.com/abwarten/Melody-Sync-Release/releases/download/v0.0.3-beta/MelodySync-Setup-0.0.3-beta.exe"
           variant="download"
         >
           <FaDownload className="mr-2" />

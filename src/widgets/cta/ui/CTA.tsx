@@ -3,7 +3,6 @@
 import styled from "@emotion/styled";
 import tw from "twin.macro";
 import { FaDownload, FaDiscord } from "react-icons/fa";
-import { Button } from "@/shared/ui/button";
 
 const BottomSection = styled.section`
   ${tw`bg-white text-white`}

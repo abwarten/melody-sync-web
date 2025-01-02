@@ -3,7 +3,7 @@
 import styled from "@emotion/styled";
 import tw from "twin.macro";
 import { FaDiscord, FaDownload } from "react-icons/fa";
-import { Button } from "@/shared/ui/button";
+import { Button } from "@/shared/ui/Button";
 
 const HeroSection = styled.section`
   ${tw`flex items-center justify-between max-w-[1200px] mx-auto`}
@@ -53,7 +53,7 @@ export const Hero = () => {
         <HeroButtons>
           <Button
             variant="primary"
-            href="https://github.com/abwarten/Melody-Sync-Release/releases/latest"
+            href="https://github.com/abwarten/Melody-Sync-Release/releases/download/v0.0.3-beta/MelodySync-Setup-0.0.3-beta.exe"
             target="_blank"
           >
             <FaDownload className="mr-2" />
