@@ -249,6 +249,18 @@ export default function HowToUsePage() {
               - 설정 문의는 디스코드나 메일로 부탁드립니다 :)
             </StepContent>
           </Section>
+
+          <Section>
+            <SectionTitle>4. OBS 설정</SectionTitle>
+            <StepList>
+              <Step>
+                <StepContent>
+                  소스 목록 → 추가 → 텍스트(GDI+) 선택 → 이름을 srt 로 변경 →
+                  확인
+                </StepContent>
+              </Step>
+            </StepList>
+          </Section>
         </Content>
       </Container>
     </>
