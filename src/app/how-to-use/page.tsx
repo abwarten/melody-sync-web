@@ -233,6 +233,22 @@ export default function HowToUsePage() {
               </StepList>
             </SubSection>
           </Section>
+
+          <Section>
+            <SectionTitle>3. DAW 설정 (Studio One 6)</SectionTitle>
+            <StepList>
+              <Step>
+                <StepContent>
+                  Studio One 메뉴 → 옵션 → 외장장치 → 추가 → 새악기 → 받기,
+                  보내기 loopMidi 선택 → MIDI 클락 보내기, MIDI 클락 스타트
+                  사용, MIDI 타임코드 보내기 선택 후 확인
+                </StepContent>
+              </Step>
+            </StepList>
+            <StepContent style={{ marginTop: "16px", color: "#666" }}>
+              - 설정 문의는 디스코드나 메일로 부탁드립니다 :)
+            </StepContent>
+          </Section>
         </Content>
       </Container>
     </>
