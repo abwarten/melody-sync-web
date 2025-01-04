@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ClientLayoutWrapper } from "@/components/ClientLayoutWrapper";
+import { MainLayout } from "@/shared/layouts/MainLayout";
 
 export const metadata: Metadata = {
   title: "MelodySync",
@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );

@@ -19,7 +19,7 @@ const BaseButton = styled.a<{ variant: ButtonProps["variant"] }>`
   padding: 0 24px;
 
   &:visited {
-    color: inherit;
+    ${({ variant }) => variant === "discord" && tw`text-white`}
   }
 
   ${({ variant }) => {
@@ -31,7 +31,7 @@ const BaseButton = styled.a<{ variant: ButtonProps["variant"] }>`
       case "download":
         return tw`bg-white text-black hover:bg-[#f5f5f5]`;
       case "discord":
-        return tw`bg-[#5865F2] text-white hover:bg-[#4752C4]`;
+        return tw`bg-[#5865F2] text-white hover:bg-[#4752C4] hover:text-white`;
       default:
         return "";
     }
