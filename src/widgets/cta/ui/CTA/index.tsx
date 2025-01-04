@@ -14,7 +14,7 @@ import {
 } from "./styled";
 import { CTACONTENT } from "../../model/constants";
 
-export const CTA = () => {
+const CTA = () => {
   const { title, description, downloadUrl, discordUrl } = CTACONTENT;
 
   return (
@@ -41,9 +41,14 @@ export const CTA = () => {
             width={640}
             height={340}
             priority
+            quality={75}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
           />
         </BottomRight>
       </BottomInner>
     </BottomSection>
   );
 };
+
+export default CTA;

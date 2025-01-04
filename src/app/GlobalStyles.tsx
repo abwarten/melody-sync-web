@@ -18,6 +18,8 @@ export const GlobalStyles = () => (
         margin: 0;
         padding: 0;
         overflow-x: hidden;
+        font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+          Roboto, sans-serif;
       }
 
       body {

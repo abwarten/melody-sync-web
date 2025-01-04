@@ -32,7 +32,7 @@ const EmailText = styled.p`
   ${tw`text-gray-800`}
 `;
 
-export const ContactPage = () => {
+const ContactPage = () => {
   return (
     <Container>
       <Content>
@@ -49,3 +49,5 @@ export const ContactPage = () => {
     </Container>
   );
 };
+
+export default ContactPage;

@@ -11,7 +11,7 @@ import {
 } from "./styled";
 import { STEPS } from "../../model/constants";
 
-export const Steps = () => {
+const Steps = () => {
   return (
     <StepsSection>
       <StepsTitle>간단한 3단계로 시작하기</StepsTitle>
@@ -27,3 +27,5 @@ export const Steps = () => {
     </StepsSection>
   );
 };
+
+export default Steps;

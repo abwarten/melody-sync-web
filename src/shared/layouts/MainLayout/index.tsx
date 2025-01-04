@@ -1,13 +1,17 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
-import { TopBar } from "@/widgets/header";
+
+const TopBar = dynamic(() => import("@/widgets/header"), {
+  loading: () => <div className="h-16 bg-white shadow-sm animate-pulse" />,
+});
 
 interface MainLayoutProps {
   children: React.ReactNode;
 }
 
-export const MainLayout = ({ children }: MainLayoutProps) => {
+const MainLayout = ({ children }: MainLayoutProps) => {
   const pathname = usePathname() || "/";
 
   return (
@@ -17,3 +21,5 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
     </>
   );
 };
+
+export default MainLayout;

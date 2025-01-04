@@ -12,7 +12,7 @@ import {
 } from "./styled";
 import { FEATURES } from "../../model/constants";
 
-export const Features = () => {
+const Features = () => {
   return (
     <FeaturesSection>
       <FeaturesTitle>강력한 기능을 간단하게</FeaturesTitle>
@@ -30,3 +30,5 @@ export const Features = () => {
     </FeaturesSection>
   );
 };
+
+export default Features;

@@ -1,1 +1,1 @@
-export { Features } from "./ui/Features";
+export { default } from "./ui/Features";

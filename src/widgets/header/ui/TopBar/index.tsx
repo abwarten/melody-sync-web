@@ -1,13 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { TopBarContainer, LeftSection, RightNav } from "./styled";
 import { Navigation } from "../Navigation";
 import { Logo } from "../Logo";
-import { DownloadButton } from "../DownloadButton";
-import type { TopBarProps } from "../../model/types";
 
-export const TopBar = ({ currentPath }: TopBarProps) => {
+const DownloadButton = dynamic(() => import("../DownloadButton"), {
+  loading: () => (
+    <div className="w-32 h-10 animate-pulse bg-gray-100 rounded" />
+  ),
+});
+
+const TopBar = ({ currentPath }: { currentPath: string }) => {
   return (
     <TopBarContainer>
       <LeftSection>
@@ -20,3 +25,5 @@ export const TopBar = ({ currentPath }: TopBarProps) => {
     </TopBarContainer>
   );
 };
+
+export default TopBar;

@@ -82,8 +82,9 @@ export const HeroButtons = styled.div`
 export const HeroImage = styled.div`
   ${tw`w-full md:w-1/2 flex justify-center md:justify-end mt-12 sm:mt-8 md:mt-0`}
 
-  img {
-    ${tw`w-full h-auto`}
+  > span {
+    width: 100% !important;
+    height: auto !important;
     max-width: 400px;
 
     @media (min-width: 640px) {

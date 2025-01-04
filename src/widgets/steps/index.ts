@@ -1,1 +1,1 @@
-export { Steps } from "./ui/Steps/Steps";
+export { default } from "./ui/Steps/Steps";

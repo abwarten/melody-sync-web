@@ -1,13 +1,15 @@
 "use client";
 
 import { GlobalStyles } from "./GlobalStyles";
-import { Metadata } from "next";
-import { MainLayout } from "@/shared/layouts/MainLayout";
+import dynamic from "next/dynamic";
+import "pretendard/dist/web/static/pretendard.css";
+import { metadata } from "./metadata";
 
-export const metadata: Metadata = {
-  title: "MelodySync",
-  description: "DAW와 자막을 쉽게 동기화하세요",
-};
+const MainLayout = dynamic(() => import("@/shared/layouts/MainLayout"), {
+  loading: () => <div className="min-h-screen animate-pulse" />,
+});
+
+export { metadata };
 
 export default function RootLayout({
   children,

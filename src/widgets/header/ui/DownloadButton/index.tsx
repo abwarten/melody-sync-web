@@ -1,7 +1,7 @@
 import { NavLink } from "@/shared/ui/nav-link";
 import { FaDownload } from "react-icons/fa";
 
-export const DownloadButton = () => {
+const DownloadButton = () => {
   return (
     <NavLink
       href="https://github.com/abwarten/Melody-Sync-Release/releases/download/v0.0.3-beta/MelodySync-Setup-0.0.3-beta.exe"
@@ -12,3 +12,5 @@ export const DownloadButton = () => {
     </NavLink>
   );
 };
+
+export default DownloadButton;

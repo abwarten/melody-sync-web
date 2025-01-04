@@ -4,7 +4,7 @@ import { Container, Content } from "./styled";
 import { MarkdownContent } from "@/shared/ui/markdown";
 import type { HowToUsePageProps } from "../../model/types";
 
-export const HowToUsePage = ({ content }: HowToUsePageProps) => {
+const HowToUsePage = ({ content }: HowToUsePageProps) => {
   return (
     <Container>
       <Content>
@@ -13,3 +13,5 @@ export const HowToUsePage = ({ content }: HowToUsePageProps) => {
     </Container>
   );
 };
+
+export default HowToUsePage;

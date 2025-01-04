@@ -2,6 +2,7 @@
 
 import { FaDiscord, FaDownload } from "react-icons/fa";
 import { Button } from "@/shared/ui/button";
+import Image from "next/image";
 import {
   HeroSection,
   HeroText,
@@ -21,7 +22,7 @@ const defaultProps: HeroProps = {
   discordUrl: "https://discord.gg/vJBQAsBmDR",
 };
 
-export const Hero = (props: Partial<HeroProps> = {}) => {
+const Hero = (props: Partial<HeroProps> = {}) => {
   const { title, subtitle1, subtitle2, downloadUrl, discordUrl } = {
     ...defaultProps,
     ...props,
@@ -45,8 +46,19 @@ export const Hero = (props: Partial<HeroProps> = {}) => {
         </HeroButtons>
       </HeroText>
       <HeroImage>
-        <img src="/image1.png" alt="Melody Sync Interface" />
+        <Image
+          src="/image1.png"
+          alt="Melody Sync Interface"
+          width={640}
+          height={480}
+          priority
+          quality={75}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
+        />
       </HeroImage>
     </HeroSection>
   );
 };
+
+export default Hero;
