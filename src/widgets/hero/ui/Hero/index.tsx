@@ -15,7 +15,7 @@ import type { HeroProps } from "../../model/types";
 const defaultProps: HeroProps = {
   title: "자막 동기화를\n더 쉽고 빠르게",
   subtitle:
-    "Melody-Sync는 DAW의 오디오 신호와 자막을 실시간으로 동기화하여 OBS에 출력하는 도구입니다.",
+    "Melody-Sync는 DAW의 오디오 신호와 자막을 실시간으로\n동기화하여 OBS에 출력하는 도구입니다.",
   downloadUrl:
     "https://github.com/abwarten/Melody-Sync-Release/releases/download/v0.0.3-beta/MelodySync-Setup-0.0.3-beta.exe",
   discordUrl: "https://discord.gg/vJBQAsBmDR",

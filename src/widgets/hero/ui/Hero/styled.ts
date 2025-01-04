@@ -22,7 +22,6 @@ export const HeroTitle = styled.h1`
 export const HeroSubtitle = styled.p`
   ${tw`text-xl text-gray-600 mb-12`}
   line-height: 1.5;
-  white-space: pre-line !important;
 `;
 
 export const HeroButtons = styled.div`
