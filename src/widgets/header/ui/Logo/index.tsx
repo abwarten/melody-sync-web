@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import Link from "next/link";
 
 const LogoTitle = styled.h1`
-  ${tw`text-xl font-bold text-black cursor-pointer`}
+  ${tw`text-base md:text-xl font-bold text-black cursor-pointer`}
 `;
 
 export const Logo = () => {

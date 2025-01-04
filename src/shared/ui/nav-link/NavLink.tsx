@@ -14,7 +14,7 @@ const BaseNavLink = styled.a<{
   isActive?: boolean;
   variant?: "default" | "download";
 }>`
-  ${tw`text-black hover:text-gray-600 cursor-pointer relative`}
+  ${tw`text-sm md:text-base text-black hover:text-gray-600 cursor-pointer relative`}
   margin-left: 1rem;
   display: flex;
   align-items: center;
@@ -42,6 +42,11 @@ const BaseNavLink = styled.a<{
     padding: 8px 16px;
     border-radius: 6px;
     transition: background-color 0.2s;
+    font-size: 14px;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
 
     &:hover {
       background-color: #333333;

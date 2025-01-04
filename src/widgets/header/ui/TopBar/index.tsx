@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { TopBarContainer, LeftSection, RightNav } from "./styled";
 import { Navigation } from "../Navigation";
 import { Logo } from "../Logo";

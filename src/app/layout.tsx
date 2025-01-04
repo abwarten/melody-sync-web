@@ -1,3 +1,6 @@
+"use client";
+
+import { GlobalStyles } from "./GlobalStyles";
 import { Metadata } from "next";
 import { MainLayout } from "@/shared/layouts/MainLayout";
 
@@ -14,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
+        <GlobalStyles />
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

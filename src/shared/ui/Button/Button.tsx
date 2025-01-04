@@ -13,10 +13,38 @@ interface ButtonProps {
 }
 
 const BaseButton = styled.a<{ variant: ButtonProps["variant"] }>`
-  ${tw`flex items-center justify-center rounded-lg text-lg font-semibold transition-colors duration-200`}
+  ${tw`flex items-center justify-center rounded-lg transition-colors duration-200`}
   text-decoration: none;
-  height: 48px;
-  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  width: auto;
+
+  @media (min-width: 640px) and (max-width: 1023px) {
+    font-size: 12px;
+    padding: 8px 12px;
+    height: 40px;
+
+    svg {
+      width: 12px !important;
+      height: 12px !important;
+      margin-right: 6px !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    height: 48px;
+    padding: 0 24px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+  }
 
   &:visited {
     ${({ variant }) => variant === "discord" && tw`text-white`}
@@ -38,8 +66,9 @@ const BaseButton = styled.a<{ variant: ButtonProps["variant"] }>`
   }}
 
   svg {
-    margin-right: 8px;
-    font-size: 16px;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
   }
 `;
 
